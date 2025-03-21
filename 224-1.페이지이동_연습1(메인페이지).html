@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/testData.js"></script>
+    <style>
+        body { margin: 0;}
+        .sec {
+            max-width: 1100px;
+            border: 1px solid;
+            margin: 0 auto ;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .item {
+            width: calc((100% - (10px * 3)) / 4);
+        }
+        
+        .item img {
+            width: 100%;
+        }
+        .s_price {
+            font-weight: 900;
+            font-size: 24px;
+        }
+    </style>
+
+</head>
+<body>
+    <header class="header"></header>
+    <main class="main">
+        <div class="main_banner"></div>
+        <div class="sec" id="sec1"> 
+        </div>
+        <div class="sec" id="sec2"></div>
+    </main>
+    <footer class="footer"></footer>
+
+    <script>
+        let sec = document.getElementsByClassName('sec')[0];
+
+        for(let i=0; i<8; i++) {
+            sec.innerHTML += `
+                <div class="item">
+                    <a href="224-2.페이지이동_연습2(상세페이지).html?itemNo=${ITEM_LIST[i].item_no}">
+                        <div class="imgBox">
+                            <img src="./img/theComma/items/best/${ITEM_LIST[i].src}" alt="">
+                        </div>
+                        <div class="descBox">
+                            <div class="item_no">${ITEM_LIST[i].item_no}</div>
+                            <div class="item_title">${ITEM_LIST[i].title}</div>
+                            <div class="o_price">
+                                <del>${(ITEM_LIST[i].o_price).toLocaleString('ko')}</del>
+                            </div>
+                            <div class="s_price">
+                                ${(ITEM_LIST[i].s_price).toLocaleString('ko')}
+                            </div>
+                        </div>
+                    </a>
+                </div> 
+            `;
+            
+        }
+    </script>
+</body>
+</html>
