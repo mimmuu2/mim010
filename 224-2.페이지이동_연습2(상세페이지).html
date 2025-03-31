@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/testData.js"></script>
+    <style>
+        body { margin: 0;}
+        .main{
+            max-width: 1100px;
+            margin: 0 auto;
+
+        }
+        .main_sec {
+            display: flex;
+            gap: 40px;
+        }
+        .img_box { 
+            width: 50%;
+            border: 1px solid;
+            
+        }
+        .img_box img {
+            width: 100%;
+        }
+        .desc_box { 
+            width: 50%;
+            border: 1px solid;
+            
+        }
+
+    </style>
+
+    <script>
+        
+        function get_url_info(key) {
+            let url = location.href; // 224-2.페이지이동_연습2(상세페이지).html?cateNo=0&itemNo=2 
+            url = url.split("?");// [224-2.페이지이동_연습2(상세페이지).html  ,  cateNo=0&itemNo=2 ]
+            if(url.length > 1) { // 1개보다 크면 정보가(?) 1개 이상 있다 라는 뜻
+                url = url[1].split("&"); // cateNo=0&itemNo=2  =>  [cateNo=0, itemNo=2]
+
+                for(let i=0; i<url.length; i++){
+                    let tmp_url=url[i].split("=") // i=0, cateNo=0 => [cateNo , 0]
+                                                // i=1, itemNo=2 => [itemNo , 2]
+                        
+                    if(tmp_url[0] == key) {
+                        console.log(tmp_url[1])
+                        return tmp_url[1];
+                    }
+                }   
+            }
+        } 
+
+ 
+
+    </script>
+</head>
+<body>
+    <header class="header"></header>
+    <main class="main">
+        <div class="main_sec"></div>
+    </main>
+    <footer class="footer"></footer>
+
+    <script>
+
+        let idx = get_url_info("itemNo");
+        console.log("itemNo: ",idx)
+        let item = ITEM_LIST[idx];
+
+        document.getElementsByClassName('main_sec')[0].innerHTML = `
+            <div class="img_box">
+                <img src="./img/theComma/items/best/${item.src}" alt="">
+            </div>
+            <div class="desc_box">
+                <div class="title">${item.title}</div>
+                <div class="o_price"><del>${item.o_price}</del></div>
+                <div class="s_price">${item.s_price}</div>
+                <div class="desc">${item.desc}</div>
+            </div>`
+    </script>
+</body>
+</html>
