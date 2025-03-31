@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  overflow: hidden;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+/*탑헤드시작*/
+header {
+  min-width: 1100px
+}
+.top_bar {
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  background: #f5f5f5;
+}
+.header {
+  width: 100%;
+  height: 100px;
+  border-bottom: 2px solid #bbb;
+  clear: both;
+}
+.contents {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1100px;
+  box-sizing: border-box;
+}
+.top_menu {
+  float: right;
+}
+.top_menu a {
+  text-decoration: none;
+  color: #555;
+}
+.top_menu li {
+  float: left;
+  padding-left: 20px;
+}
+/*로고시작*/
+.logo {
+  width: 220px;
+  height: 100%;
+  float: left;
+}
+.logo h1 {
+  width: 100%;
+  height: 100%;
+}
+.logo a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url(https://platum.kr/wp-content/uploads/2022/04/Community_Gaming_logo-1024x281.png)
+    no-repeat left / contain;
+}
+/*네비시작*/
+.ul_nav {
+  float: right;
+  line-height: 100px;
+}
+.ul_nav > li {
+  float: left;
+  padding-left: 50px;
+  font-weight: 900;
+}
+.ul_nav > li a {
+  box-sizing: border-box;
+  font-size: 20px;
+  color: black;
+}
+/******************메인섹터******************/
+main {
+  min-width: 1100px
+}
+.main_sec {
+  min-height: calc(100vh - 132px - 304px);
+  padding: 50px 0 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.main_pic {
+  height: 450px;
+  margin-bottom: 50px;
+}
+.main_banner {
+  height: 100%;
+  background: url(../img/콘솔.jpg) no-repeat left / contain;
+  background-size: 100% 100%;
+}
+.banner {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+.offline {
+  width: 100%;
+  padding: 30px 0 35px;
+  box-sizing: border-box;
+  background: #f5f5f5;
+}
+.title {
+  font-size: 22px;
+  padding: 0 0 15px 10px;
+}
+.item_container {
+  width: 100%;
+  height: 305px;
+  margin-top: 10px;
+}
+.game_material {
+  /* position: relative; */
+  width: calc(((100% - (10px * 2)) / 3) - 0.1px);
+  overflow: hidden;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-bottom: 10px;
+  float: left;
+  background: #fff;
+  box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.material_title .show_more {
+  width: 30px;
+  height: 40px;
+  display: block;
+  position: relative;
+  right: -10px;
+}
+
+.material_title > h3 {
+  float: left;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: calc(100% - 50px);
+  color: #2f2f2f;
+  margin: 0;
+  padding: 0;
+}
+.material_title {
+  overflow: hidden;
+  height: 40px;
+  line-height: 40px;
+
+  padding: 0 10px;
+}
+.material_title > span {
+  float: right;
+}
+.material_title .show_more:hover::before,
+.material_title .show_more:hover::after {
+  transform: translate(-50%, -50%) rotate(180deg);
+  background: #222;
+}
+.material_title .show_more::before,
+.material_title .show_more::after {
+  content: "";
+  display: block;
+  background: #656565;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.material_title .show_more::before {
+  width: 12px;
+  height: 3px;
+}
+.material_title .show_more::after {
+  width: 3px;
+  height: 12px;
+}
+.material_title {
+  border-bottom: 2px solid #7096e6;
+}
+.material_contents {
+  width: 100%;
+  height: 251px;
+  color: #454545;
+}
+.contensts_row {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  vertical-align: middle;
+  display: inline-block;
+}
+.contents_title {
+  float: left;
+  max-width: calc(100% - 80px);
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.contents_title > span {
+  margin-left: 5px;
+  font-size: 14px;
+}
+.contents_upload_data {
+  float: right;
+  width: 80px;
+  text-align: right;
+  font-size: 13px;
+}
+
+/* footer */
+
+footer {
+  clear: both;
+  width: 100%;
+  height: 80px;
+  background: #2c2c2c;
+  color: #fff;
+  padding: 50px 0;
+}

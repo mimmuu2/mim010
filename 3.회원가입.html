@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/3.회원가입.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="box">
+        <div class="logo">
+          <h1>
+            <a href="./index.html">
+              <span>커뮤니티게이밍</span>
+            </a>
+          </h1>
+        </div>
+        <form
+          action="#"
+          method="post"
+          id="frm_join"
+          class="container"
+          autocomplete="off"
+          onsubmit="return false;"
+        >
+          <section class="info user_info">
+            <h2 class="class_sec">회원정보</h2>
+            <fieldset>
+              <legend>개인정보</legend>
+              <div class="member_info">
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  class="info_txt"
+                  placeholder="이메일을 입력하세요."
+                  value
+                  tabindes="1"
+                />
+                <p class="pw_warning">사용중인 이메일 입니다.</p>
+                <input
+                  type="checkbox"
+                  name="email_chk"
+                  id="agree_cb_email"
+                  checked
+                  tabindex="2"
+                />
+                <label for="agree_cb_email" class="lbl_email"
+                  >이메일 수신동의</label
+                >
+                <span>(공지 및 단체 메일을 받습니다.)</span>
+                <input
+                  type="password"
+                  name="pw"
+                  id="pw"
+                  class="info_txt"
+                  placeholder="비밀번호를 입력하세요."
+                  tabindex="3"
+                />
+                <p class="pw_warning">
+                  문자, 숫자, 기호를 조합하여 8자 이상을 사용하세요
+                </p>
+                <input
+                  type="password"
+                  id="pw_chk"
+                  class="info_txt"
+                  placeholder="비밀번호 재확인"
+                  tabindex="4"
+                />
+                <p class="pw_warning">비밀번호가 일치하지 않습니다.</p>
+              </div>
+              <div class="personal_info">
+                <input
+                  type="text"
+                  id="user_name"
+                  class="info_txt"
+                  name="user_name"
+                  placeholder="이름을 입력하세요"
+                  value
+                  tabindex="5"
+                />
+                <input
+                  type="radio"
+                  class="rd_sex"
+                  id="male"
+                  name="rd_sex"
+                  value="male"
+                  tabindex="6"
+                />
+                <label for="male" class="lbl_sex">남</label>
+                <input
+                  type="radio"
+                  class="rd_sex"
+                  id="female"
+                  name="rd_sex"
+                  value="female"
+                  tabindex="7"
+                />
+                <label for="female" class="lbl_sex">여</label>
+              </div>
+            </fieldset>
+          </section>
+          <section class="info_class_info">
+            <h2 class="class_sec">가입정보</h2>
+            <fieldset>
+              <legend>주로 하는 게임장르</legend>
+              <select name="branch" id="branch" class="sel_class" tabindex="8">
+                <option value="RPG(소울류/오픈월드)">RPG(소울류/오픈월드)</option>
+                <option value="FPS">FPS</option>
+                <option value="턴제카드게임">턴제카드게임</option>
+                <option value="리듬게임">리듬게임</option>
+                <option value="0">없음</option>
+              </select>
+              <p class="pw_warning">수강지점이 선택되지 않았습니다.</p>
+            </fieldset>
+
+            <fieldset>
+              <legend>추천경로</legend>
+              <select name="course" id="course" class="sel_class" tabindex="9">
+                <option value="인터넷/검색">인터넷/검색</option>
+                <option value="지인추천">지인추천</option>
+                <option value="0">없음</option>
+              </select>
+            </fieldset>
+
+            <input
+              type="button"
+              value="확인"
+              id="btn_submit"
+              tabindex="10"
+              onclick="chk();"
+            />
+          </section>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
